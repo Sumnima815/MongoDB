@@ -1,0 +1,39 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "An MLOps project for productionizing models"
+readme = "README.md"
+authors = [
+    {name = "Sumnima Giri", email = "sumnimaag@gmail.com"}
+]
+requires-python = ">=3.11"
+
+dependencies = [
+    "ipykernel",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "plotly",
+    "seaborn",
+    "scikit-learn",
+    "pymongo",
+    "from_root",
+    "dill",
+    "certifi",
+    "PyYAML",
+    "boto3",
+    "mypy-boto3-s3",
+    "botocore",
+    "fastapi",
+    "python-multipart",
+    "uvicorn",
+    "jinja2",
+    "imbalanced-learn",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = {find = {}}
