@@ -29,6 +29,7 @@ dependencies = [
     "uvicorn",
     "jinja2",
     "imbalanced-learn",
+    "python-dotenv>=1.2.2",
 ]
 
 [build-system]
