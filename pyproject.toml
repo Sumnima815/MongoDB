@@ -30,6 +30,7 @@ dependencies = [
     "jinja2",
     "imbalanced-learn",
     "python-dotenv>=1.2.2",
+    "huggingface-hub>=1.19.0",
 ]
 
 [build-system]

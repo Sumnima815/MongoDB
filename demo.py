@@ -1,28 +1,16 @@
-# below code is to check the logging config
-# from src.logger import logging
+from dotenv import load_dotenv
+load_dotenv()  # MUST be before everything else
 
-# logging.debug("This is a debug message.")
-# logging.info("This is an info message.")
-# logging.warning("This is a warning message.")
-# logging.error("This is an error message.")
-# logging.critical("This is a critical message.")
+import sys
+from src.exception import MyException
+from src.logger import logging
+from src.pipeline.training_pipeline import TrainPipeline
 
-# --------------------------------------------------------------------------------
-
-# # below code is to check the exception config
-# from src.logger import logging
-# from src.exception import MyException
-# import sys
-
-# try:
-#     a = 1+'Z'
-# except Exception as e:
-#     logging.info(e)
-#     raise MyException(e, sys) from e
-
-# --------------------------------------------------------------------------------
-
-from src.pipline.training_pipeline import TrainPipeline
-
-pipline = TrainPipeline()
-pipline.run_pipeline()
+if __name__ == "__main__":
+    try:
+        logging.info("Starting training pipeline")
+        pipeline = TrainPipeline()
+        pipeline.run_pipeline()
+        logging.info("Pipeline completed successfully")
+    except Exception as e:
+        raise MyException(e, sys)

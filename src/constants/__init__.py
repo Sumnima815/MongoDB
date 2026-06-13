@@ -72,4 +72,7 @@ MODEL_PUSHER_S3_KEY = "model-registry"
 
 
 APP_HOST = "0.0.0.0"
-APP_PORT = 5000
+APP_PORT = 5000    
+
+HF_TOKEN = os.getenv("HF_TOKEN")
+HF_REPO_ID = os.getenv("HF_REPO_ID")
